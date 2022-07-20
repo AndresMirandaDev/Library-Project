@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="sidebar">
-        <iframe width="100" height="100" src="https://www.youtube.com/embed/-lrqKzmPDvQ?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+        <iframe width="200" height="200" src="https://www.youtube.com/embed/-lrqKzmPDvQ?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
         <div id="sidebar-heading">
             Add Book To Library!
         </div>
-        <form>
+        <div class="form">
             <label for="title">Title</label>
             <input id="title" type="text">
             <label for="author">Author</label>  
@@ -23,11 +23,20 @@
             <input id="pages" type="text">
             <label for="status">Status</label>
             <input id="status" type="text">
-            <button id="submit-button" type="submit">Submit</button>
-        </form>
+            <button id="submit-button" type="submit">Add Book</button>
+        </div>
     </div>
     <div class="container">
-        container
+        <div class="container-heading">
+            Welcome to the Magic Library, you can unmute the video to enjoy with some awesome music by "The Vault of Ambience" Youtube channel, check them out for more awesome ambience music!
+        </div>
+        <div class="books-grid">
+            <div class="book">
+                <div>Title:The Lord of The Rings <br/> Author:J.R.R Tolkien <br/> Pages: 295 <br/>Status: Read</div>
+                <div class="change-status">Change Status</div>
+                <div class="delete-button">Delete</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

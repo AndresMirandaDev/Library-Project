@@ -1,40 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 body{
-    height: 100vh;
-    width: 100vw;
+    margin: 0;
     display: flex;
     background: linear-gradient(337deg, rgba(180,122,58,0.8898153011204482) 0%, rgba(0,0,0,0.9010197829131653) 56%);
 }
-
-.container{
-    width: 80%;
-
-}
-
 
 .sidebar{
     background-color: #a06b68;
     width: 20%;
     display: flex;
+    padding: 5px;
     flex-direction: column;
     align-items: center;
+    box-shadow: 5px 6px 10px black;
+    font-family: 'Amatic SC', cursive;
 
 }
+
+#sidebar-heading{
+    font-size: 30px;
+    padding: 10px;
+}
+
 .sidebar label{
     display: block;
- 
+    font-size: 20px;
+    text-shadow:5px 4px 4px #622945;
+}
+.sidebar input{
+    box-shadow:5px 4px 5px #622945;
+    width: 10rem;
+    background-color: #8f8487;
 }
 .sidebar button{
     display: block;
     border: none;
     border-radius: 40px;
-    padding: 15px;
+    padding: 10px;
     margin: 4rem;
-    background-color: #c6cbd4;
+    background-color: #19253c;
     box-shadow: 4px 5px 18px rgba(0, 0, 0, 0.553);
+    color: aliceblue;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+.sidebar button:hover{
+    transform: scale(1.04);
+    background-color: #457285;
+    transition: 0.5s;
+    cursor: pointer;
 }
 .sidebar input{
     margin: 10px;
     border: none;
     border-radius: 30px;
     padding: 10px;
+}
+
+.container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+}
+
+.container-heading{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    margin: 4rem;
+    font-size: 20px;
+}
+.books-grid{
+    display: grid;
+}
+.book{
+    background-color:#622945;
+    box-shadow: 5px 6px 15px black;
+    height: 5rem;
+    padding: 3rem;
+    border-radius: 15px;
+}
+
+.delete-button{
+    background-color: #ce4a58;
+    border: solid 2px aliceblue;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    margin: 2px;
+}
+
+.change-status{
+    background-color: #457285;
+    border: solid 2px aliceblue;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    margin: 2px;
 }
