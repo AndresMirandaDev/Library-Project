@@ -30,7 +30,10 @@ body{
 .sidebar input{
     box-shadow:5px 4px 5px #622945;
     width: 10rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
     background-color: #8f8487;
+    color: aliceblue;
 }
 .sidebar button{
     display: block;
@@ -74,6 +77,8 @@ body{
 }
 .books-grid{
     display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 .book{
     background-color:#622945;
