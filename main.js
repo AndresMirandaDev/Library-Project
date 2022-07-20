@@ -30,10 +30,21 @@ submitButton.addEventListener("click", function(){
 
 
 function updateLibrary(library){
-    let booksGrid = document.querySelector(".books-grid");
+    const booksGrid = document.querySelector(".books-grid");
     library.map((book)=>{
-        let bookContainer = document.createElement("div");
+        const bookContainer = document.createElement("div");
         bookContainer.innerText = "Title: " + book["title"]+ "\n" + "Author: "+book["author"]+"\n" + "Pages: " + book["pages"] + "\n" + "Status: " + book["status"];
+        
+        const deleteButton = document.createElement("div");
+        deleteButton.innerText = "Delete"
+        
+        const statusButton = document.createElement("div");
+        statusButton.innerText = "Change Status"
+
+        bookContainer.appendChild(deleteButton).className = "delete-button";
+        bookContainer.appendChild(statusButton).className = "change-status";
+        
+        
         return booksGrid.appendChild(bookContainer).className="book";           
     })
 }
