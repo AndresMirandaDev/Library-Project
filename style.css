@@ -85,7 +85,20 @@ body{
     height: 5rem;
     padding: 3rem;
     border-radius: 15px;
+    animation: animateElement linear .3s;
 }
+
+@keyframes animateElement{
+    0% {
+      opacity:0;
+      transform:  scaleY(0) translateX(-100%);
+    }
+    100% {
+      opacity:1;
+      transform:  scaleY(1) translateX(0%);
+    }
+  }
+  
 
 .delete-button{
     background-color: #ce4a58;

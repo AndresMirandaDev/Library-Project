@@ -19,35 +19,32 @@ submitButton.addEventListener("click", function(){
     
     currentLibrary.push(newBook);
     
+
+
     document.querySelector("#title").value = "";
     document.querySelector("#author").value = "";
     document.querySelector("#pages").value = "";
     document.querySelector("#status").value = "";
     
-    console.log(currentLibrary)
-    updateLibrary(currentLibrary)
+    const booksGrid = document.querySelector(".books-grid")
+    const bookContainer = document.createElement("div");
+
+    bookContainer.innerText = "Title: " + currentLibrary[currentLibrary.length-1]["title"]+ "\n" + "Author: "+currentLibrary[currentLibrary.length-1]["author"]+"\n" + "Pages: " + currentLibrary[currentLibrary.length-1]["pages"] + "\n" + "Status: " + currentLibrary[currentLibrary.length-1]["status"];
+    const deleteButton = document.createElement("div");
+    deleteButton.innerText = "Delete"
+        
+    const statusButton = document.createElement("div");
+    statusButton.innerText = "Change Status"
+
+    bookContainer.appendChild(deleteButton).className = "delete-button";
+    bookContainer.appendChild(statusButton).className = "change-status";
+
+    booksGrid.appendChild(bookContainer).className = "book";
+
 })
 
 
-function updateLibrary(library){
-    const booksGrid = document.querySelector(".books-grid");
-    library.map((book)=>{
-        const bookContainer = document.createElement("div");
-        bookContainer.innerText = "Title: " + book["title"]+ "\n" + "Author: "+book["author"]+"\n" + "Pages: " + book["pages"] + "\n" + "Status: " + book["status"];
-        
-        const deleteButton = document.createElement("div");
-        deleteButton.innerText = "Delete"
-        
-        const statusButton = document.createElement("div");
-        statusButton.innerText = "Change Status"
 
-        bookContainer.appendChild(deleteButton).className = "delete-button";
-        bookContainer.appendChild(statusButton).className = "change-status";
-        
-        
-        return booksGrid.appendChild(bookContainer).className="book";           
-    })
-}
 
 
 
