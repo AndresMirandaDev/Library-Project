@@ -26,6 +26,14 @@ submitButton.addEventListener("click", function(){
     document.querySelector("#pages").value = "";
     document.querySelector("#status").value = "";
     
+    if(titleInput != "" && authorInput != "" && pagesInput != "" && statusInput != ""){
+        addBook();
+    }
+
+})
+
+function addBook(){
+     
     const booksGrid = document.querySelector(".books-grid")
     const bookContainer = document.createElement("div");
 
@@ -39,11 +47,19 @@ submitButton.addEventListener("click", function(){
     bookContainer.appendChild(deleteButton).className = "delete-button";
     bookContainer.appendChild(statusButton).className = "change-status";
 
+    bookContainer.setAttribute("id", currentLibrary[currentLibrary.length-1]["title"])
     booksGrid.appendChild(bookContainer).className = "book";
 
+}
+
+const deleteButton = document.querySelector(".delete-button");
+const statusButton = document.querySelector(".change-status");
+
+document.addEventListener("click", function(e){
+    if(e.target.className="delete-button"){
+        e.target.parentElement.remove();
+    }
 })
-
-
 
 
 
