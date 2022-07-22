@@ -1,19 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Righteous&display=swap');
 body{
     margin: 0;
     display: flex;
     background: linear-gradient(337deg, rgba(180,122,58,0.8898153011204482) 0%, rgba(0,0,0,0.9010197829131653) 56%);
 }
 
+
+/* ---Sidebar----*/
 .sidebar{
-    background-color: #a06b68;
+    background: radial-gradient(circle, rgba(44,44,43,0.9710477941176471) 12%, rgba(18,58,85,1) 66%);
     width: 20%;
     display: flex;
-    padding: 5px;
+    padding: 15px;
     flex-direction: column;
     align-items: center;
-    box-shadow: 5px 6px 10px black;
-    font-family: 'Amatic SC', cursive;
+    box-shadow: 5px 10px 60px black;
+    font-family: 'Playfair Display SC', serif;
+    color: antiquewhite;
 
 }
 
@@ -25,26 +28,28 @@ body{
 .sidebar label{
     display: block;
     font-size: 20px;
-    text-shadow:5px 4px 4px #622945;
+    
 }
-.sidebar input{
-    box-shadow:5px 4px 5px #622945;
-    width: 10rem;
-    font-family: 'Amatic SC', cursive;
+.input-field{
+    font-family: 'Playfair Display SC', serif;
     font-size: 20px;
     background-color: #8f8487;
     color: aliceblue;
+    margin:0vw;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
 }
 .sidebar button{
     display: block;
     border: none;
-    border-radius: 40px;
+    border-radius: 80px;
     padding: 10px;
     margin: 4rem;
     background-color: #19253c;
     box-shadow: 4px 5px 18px rgba(0, 0, 0, 0.553);
     color: aliceblue;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Playfair Display SC', serif;
     font-size: 30px;
 }
 
@@ -54,14 +59,10 @@ body{
     transition: 0.5s;
     cursor: pointer;
 }
-.sidebar input{
-    margin: 10px;
-    border: none;
-    border-radius: 30px;
-    padding: 10px;
-}
-
+/*---Books Container--- */
 .container{
+    background-image:url(images/4yboowo3yr821.jpeg);
+    background-repeat: repeat;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -79,34 +80,55 @@ body{
     display: grid;
     gap: 20px;
 }
+
+/*---books---*/
 .book{
-    background-color:#622945;
+    background-image: url(images/Old-Papyrus.jpg.webp);
     box-shadow: 5px 6px 15px black;
-    height: 5rem;
     padding: 3rem;
+    width: 10rem;
     border-radius: 15px;
-    animation: animateElement linear .3s;
+    animation: animateElement linear .8s;
+}
+
+.book:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.book-info{
+    margin: 1rem;
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    border-bottom: solid 2px #19253c;
+    text-align: center;
 }
 
 @keyframes animateElement{
     0% {
       opacity:0;
-      transform:  scaleY(0) translateX(-100%);
+      transform:  scaleY(0) translateY(-100%);
     }
     100% {
       opacity:1;
-      transform:  scaleY(1) translateX(0%);
+      transform:  scaleY(1) translateY(0%);
     }
   }
   
-
+/*----Buttons----*/
 .delete-button{
-    background-color: #ce4a58;
+    background-color: #79393f;
     border: solid 2px aliceblue;
     width: 100%;
     text-align: center;
     border-radius: 20px;
     margin: 2px;
+    cursor: pointer;
+}
+
+.delete-button:hover{
+    transform: scale(1.04);
+    transition: 0.8s;
 }
 
 .change-status{
@@ -116,4 +138,10 @@ body{
     text-align: center;
     border-radius: 20px;
     margin: 2px;
+    cursor: pointer;
+}
+
+.change-status:hover{
+    transform: scale(1.04);
+    transition: 0.8s;
 }
