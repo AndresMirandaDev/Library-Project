@@ -56,7 +56,7 @@ const deleteButton = document.querySelector(".delete-button");
 const statusButton = document.querySelector(".change-status");
 
 document.addEventListener("click", function(e){
-    if(e.target.className="delete-button"){
+    if(e.target.className === "delete-button"){
         e.target.parentElement.remove();
     }
 })
